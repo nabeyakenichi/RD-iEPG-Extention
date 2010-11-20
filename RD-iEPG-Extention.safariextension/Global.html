@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+<script type="text/javascript">
+  safari.application.addEventListener("command", fromContext, false);
+  function fromContext(evt) {
+    if (evt.command === "send-iEPG") {
+//      alert(safari.application.activeBrowserWindow.activeTab.title);
+//      alert(evt.userInfo.nodeName);
+//      alert(evt.userInfo.href);
+//      alert(safari.extension.settings.address);
+        var newTab = safari.application.activeBrowserWindow.openTab();
+        newTab.url = evt.userInfo.href.replace('http://','http://' + safari.extension.settings.address + '/@@@@@@');
+    }
+  }
+</script>
+</head>
+<body></body>
+</html>

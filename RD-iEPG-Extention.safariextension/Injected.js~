@@ -1,0 +1,15 @@
+document.addEventListener("contextmenu", handleContextMenu, false);
+function handleContextMenu(event) {
+    alert(event.command)
+    alert(event.target.nodeName)
+//    safari.self.tab.setContextMenuEventUserInfo(event, event.target.nodeName);
+}
+
+   function performCommand(event) {
+       if (event.command === "sned-iEPG")
+       {
+alert('aaa');
+       }
+    }
+safari.application.addEventListener("command", performCommand, false);
+
